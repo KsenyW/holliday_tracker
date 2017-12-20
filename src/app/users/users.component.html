@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <button mat-raised-button color="primary" class="right-btn" (click)="openDialog()">New user</button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Type</th>
+            <th scope="col">First day</th>
+            <th scope="col">Status</th>
+            <th scope="col">Manager</th>
+            <th scope="col">Type of employment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let element of ELEMENT_DATA">
+            <th scope="row">{{element.id}}</th>
+            <td>{{element.firstName + ' ' + element.lastName}}</td>
+            <td>{{element.email}}</td>
+            <td>{{element.role}}</td>
+            <td>{{element.firstDate | date: 'ddMMyyyy'}}</td>
+            <td>{{element.status}}</td>
+            <td>{{element.managerId}}</td>
+            <td>{{element.type}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

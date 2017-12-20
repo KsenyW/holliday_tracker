@@ -1,0 +1,23 @@
+.login-wrapper{
+  margin-top: 250px;
+}
+
+.login-block{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.login-control{
+  width: 100%;
+  float: left;
+}
+
+.login-btn{
+  float: right;
+  margin-top: 30px;
+}

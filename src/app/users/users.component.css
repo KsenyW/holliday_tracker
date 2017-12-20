@@ -1,0 +1,38 @@
+.popup-header{
+  text-align: center;
+}
+
+.right-btn{
+  float: right;
+}
+
+.img-header{
+  height: 200px;
+  width: 50%;
+  background: url("../polygonal-fox.jpg") center no-repeat;
+  background-size: contain;
+  float: left;
+}
+
+.decorated-header{
+  float: left;
+}
+
+.popup-header{
+  text-align: left;
+  line-height: 0.8;
+  padding-top: 49px;
+  font-size: 45px;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.half-width{
+  width: 49%;
+}
+
+.popup-actions{
+  float: right;
+}

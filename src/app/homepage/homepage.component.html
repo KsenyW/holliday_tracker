@@ -1,0 +1,69 @@
+<div class="container main-col">
+  <div class="row profile">
+    <div class="col-lg-3">
+      <div class="avatar"></div>
+    </div>
+    <div class="col-lg-6">
+      <div class="clearfix data-block">
+        <h1>{{loginParams.firstName+" "+loginParams.lastName}}</h1>
+        <p>
+          <strong>E-mail: </strong><span>{{loginParams.email || "-"}}</span>
+        </p>
+        <p>
+          <strong>Status: </strong><span>{{loginParams.status || "-"}}</span>
+        </p>
+        <p>
+          <strong>Type of permissions: </strong><span>{{loginParams.role || "-"}}</span>
+        </p>
+        <p>
+          <strong>First day: </strong><span>{{loginParams.firstDate || "-"}}</span>
+        </p>
+        <p>
+          <strong>Type of employment: </strong><span>{{loginParams.typeOfEmployment || "-"}}</span>
+        </p>
+        <p>
+          <strong>Manager: </strong><span>{{loginParams.managerId || "-"}}</span>
+        </p>
+      </div>
+      <div class="form-wrapper">
+        <form [formGroup]="requestForm">
+          <div class="form-group">
+            <h2>Create Request</h2>
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Type:" formControlName="requestTypeId">
+                <mat-option value="1">sick leave</mat-option>
+                <mat-option value="4">vacation</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="half-width">
+              <input matInput [matDatepicker]="frompicker" placeholder="From" formControlName="from">
+              <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+              <mat-datepicker #frompicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="half-width">
+              <input matInput [matDatepicker]="topicker" placeholder="From" formControlName="to">
+              <mat-datepicker-toggle matSuffix [for]="topicker"></mat-datepicker-toggle>
+              <mat-datepicker #topicker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="full-width">
+              <textarea matInput placeholder="Note:" formControlName="note"></textarea>
+            </mat-form-field>
+          </div>
+          <button mat-raised-button color="primary" class="right-btn" [disabled]="!requestForm.valid" (click)="createRequest()">Go!</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="plate">
+        <h2>Available</h2>
+        <p>Sick leaves: 0</p>
+        <p>Vacation: 0</p>
+      </div>
+    </div>
+  </div>
+</div>
+

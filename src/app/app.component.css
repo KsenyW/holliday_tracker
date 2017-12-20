@@ -1,0 +1,50 @@
+.container{
+  padding: 0 20px;
+}
+.navbar{
+  margin-bottom: 20px;
+  border-bottom: 4px solid #243259;
+}
+
+.nav-link{
+  color: #243259;
+}
+
+.nav-item{
+  padding: 10px;
+}
+
+.separated-btn{
+  float: right;
+}
+
+.active{
+  font-weight: bold;
+  background-color: rgba(36, 50, 89, 0.3);
+}
+
+.nav-item:hover{
+  transition: ease-out 0.5s;
+  background-color: rgba(36, 50, 89, 0.3);
+}
+
+
+.active:hover{
+  font-weight: bold;
+  background-color: rgba(36, 50, 89, 0.3);
+}
+
+.active > a{
+  color: white;
+}
+
+.nav-item:hover > a{
+  transition: ease-out 0.5s;
+  color: white;
+}
+
+.disabled{
+  color: rgba(145,161,210, 0.5);
+}
+
+

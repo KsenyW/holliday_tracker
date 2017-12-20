@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Type of employment</th>
+          <th scope="col">Sick leave</th>
+          <th scope="col">Vacation</th>
+          <th scope="col">Day off</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <h2>Email notification parameters</h2>
+      <form [formGroup]="settingsForm">
+        <mat-form-field class="full-width">
+          <input matInput tabindex="1" formControlName="email" placeholder="E-mail:">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput tabindex="2" formControlName="imap" placeholder="Imap server:">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput tabindex="3" formControlName="port" placeholder="Port:">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput tabindex="4" formControlName="userName" placeholder="User name">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput tabindex="5" formControlName="pass" placeholder="Password">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput tabindex="6" formControlName="smtf" placeholder="SMTF">
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+</div>

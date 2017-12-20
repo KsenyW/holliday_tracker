@@ -1,0 +1,42 @@
+<div class="clearfix">
+  <div class="img-header"></div>
+  <div class="decorated-header">
+    <h1 class="popup-header" mat-dialog-title>Create<br> new<br> user</h1>
+  </div>
+</div>
+<form novalidate [formGroup]="newUserForm">
+  <div mat-dialog-content>
+    <mat-form-field class="full-width">
+      <input matInput tabindex="1" formControlName="firstName" placeholder="First name">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput tabindex="1" formControlName="lastName" placeholder="Last name">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="frompicker" formControlName="firstDate" placeholder="First day:">
+      <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+      <mat-datepicker #frompicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput tabindex="1" formControlName="email" placeholder="E-mail">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-select placeholder="User type:" formControlName="role">
+        <mat-option>USER</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-select placeholder="Type of employment:" formControlName="typeOfEmployment">
+        <mat-option>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput tabindex="1" placeholder="Manager id:" formControlName="managerId">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="popup-actions">
+    <button mat-button (click)="Create()" tabindex="2" [disabled]="!newUserForm.valid">Create</button>
+    <button mat-button (click)="Close()" tabindex="-1">Close</button>
+  </div>
+</form>
