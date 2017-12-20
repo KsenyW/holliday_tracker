@@ -22,7 +22,6 @@ export class Requests {
 
   GetUser(id: string) {
     let url = this.BASE_URL+"user/"+id;
-    let url = 'data/userData.json';
 
     return this.http.get(url);
   }
